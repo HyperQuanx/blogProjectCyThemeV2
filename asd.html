@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <ti`tle>쾅쾅쾅쾅</ti>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: "Arial", sans-serif;
+        font-size: 50px;
+      }
+
+      .text {
+        display: flex;
+        gap: 30px;
+      }
+
+      .letter {
+        opacity: 0;
+        transform: scale(0.5);
+        animation: bang 3s infinite;
+      }
+
+      .letter:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .letter:nth-child(2) {
+        animation-delay: 0.75s;
+      }
+
+      .letter:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+
+      .letter:nth-child(4) {
+        animation-delay: 2.25s;
+      }
+
+      @keyframes bang {
+        0%,
+        100% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <div class="letter">천</div>
+      <div class="letter">재</div>
+      <div class="letter">교</div>
+      <div class="letter">육</div>
+    </div>
+  </body>
+</html>
