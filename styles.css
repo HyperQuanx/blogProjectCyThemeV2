@@ -128,10 +128,34 @@ p {
   color: #2aacd3;
 }
 
+.mainPR {
+  margin-top: 20px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snippets {
+  color: #2aacd3;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
 .feelingImg {
   width: 20px;
   height: 20px;
   margin-top: 4px;
+}
+
+.blogLittleName {
+  font-size: 22px;
+  font-family: "Hi Melody", sans-serif;
+}
+
+.blogLittleEmail{
+  
 }
 
 .backRHead {
