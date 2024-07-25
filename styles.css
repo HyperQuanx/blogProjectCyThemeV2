@@ -600,6 +600,7 @@ p {
   left: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
   overflow: auto;
 }
@@ -616,6 +617,7 @@ p {
   bottom: 620px;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
   overflow: auto;
 }
@@ -627,4 +629,17 @@ p {
   height: 530px;
   left: 683px;
   top: 82px;
+}
+
+.page {
+  width: 500px;
+}
+
+.pageT {
+  text-align: center;
+  color: #00bfff;
+}
+
+.pageC {
+  font-size: 16px;
 }
