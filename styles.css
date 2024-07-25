@@ -43,6 +43,15 @@ body {
   display: inline-block;
 }
 
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .background1 {
   background-color: #b4d1da;
   border-radius: 9px;
@@ -86,6 +95,20 @@ body {
   width: 1020px;
   height: 720px;
   margin: 0;
+}
+
+.backLR {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 1270px;
+  height: 620px;
+  margin: 0;
+  position: relative;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  overflow: auto;
 }
 
 .backLHead {
@@ -155,6 +178,7 @@ p {
   font-family: "Nanum Pen Script", cursive;
   font-size: 25px;
   text-align: center;
+  width: 200px;
 }
 
 .feelingImg {
@@ -308,5 +332,299 @@ p {
 }
 
 .bLW {
-  border-left: 1px solid white;
+  border-left: 2px solid white;
+}
+
+.subTitle {
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #00bfff;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.subTitle2 {
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 0;
+}
+
+.pR {
+  font-size: 16px;
+  width: 700px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.skillLPR {
+  font-size: 20px;
+}
+
+.skillLanguage {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  margin: 0 5px;
+}
+
+.morePosts {
+  display: flex;
+  justify-content: right;
+}
+
+.morePosts > a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #359dc2;
+}
+
+.postAtag {
+  color: #00bfff;
+}
+
+.posts {
+  margin-top: 50px;
+}
+
+.postButtonGroup {
+  text-align: center;
+}
+
+.postG {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.date {
+  font-size: 15px;
+  text-align: end;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dateRight {
+  justify-content: flex-end;
+  font-size: 13px;
+  margin-right: 50px;
+}
+
+.postButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.contactTitle {
+  text-align: center;
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #00bfff;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.contactSub {
+  text-align: center;
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.inputGroup {
+  margin-top: 20px;
+}
+
+.inputStyle {
+  width: 95%;
+  height: 50px;
+  border: 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.103);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+.inputStyle:active {
+  border: none;
+}
+
+.textarea {
+  width: 95%;
+  height: 100px;
+  font-size: 20px;
+  border: 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.103);
+  margin-top: 10px;
+  padding: 5px;
+  padding-left: 40px;
+}
+
+.sendB {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #00bfff;
+  color: white;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  border-radius: 2px;
+}
+
+.formBox {
+  width: 400px;
+}
+
+.loginTitle {
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: #00bfff;
+  margin: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.loginBox {
+  border: 1px solid #e1e3e5;
+  border-radius: 12px;
+  background-color: #fff;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.loginTalk {
+  text-align: center;
+  font-size: 30px;
+}
+
+.id {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.103);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 0 20px;
+}
+
+.id:focus {
+  border: none;
+}
+
+.pw {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.103);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 0 20px;
+}
+
+.detailTitle {
+  font-size: 70px;
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #359dc2;
+  margin-top: 20px;
+}
+
+.detailContent {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 800px;
+  font-size: 25px;
+  overflow: hidden;
+  overflow: auto;
+}
+
+.leftRightButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.viewButton {
+  margin: 0;
+  background-color: #359dc2;
+  color: white;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  width: 210px;
+  height: 40px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.bookBackground {
+  /* display: ; */
+  position: relative;
+}
+
+.bookL {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border-top-right-radius: 100px;
+  width: 635px;
+  height: 620px;
+  margin: 0;
+  position: relative;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  overflow: auto;
+}
+
+.bookR {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border-top-left-radius: 100px;
+  width: 635px;
+  height: 620px;
+  margin: 0;
+  position: relative;
+  left: 685px;
+  bottom: 620px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  overflow: auto;
+}
+
+.bookLine {
+  border: 0.5px solid rgb(186, 186, 186);
+  position: absolute;
+  width: 0px;
+  height: 530px;
+  left: 683px;
+  top: 82px;
 }

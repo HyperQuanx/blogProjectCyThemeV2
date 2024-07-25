@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 블로그 홈</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="background1">
+      <div class="background2">
+        <div class="backGroup">
+          <div class="backL">
+            <div class="backLHead">
+              <p>Today <span class="red">26</span></p>
+              <p>|</p>
+              <p>TOTAL 4623</p>
+            </div>
+            <div class="backLR">
+              <div>
+                <div class="detailTitle">
+                  (TIL) - Css 선택자, 가상 클래스, 가상 요소 2
+                </div>
+                <div class="date dateRight">
+                  Writer : 천재덕용 | Date : 2024.07.22 | View : 22
+                </div>
+                <div class="detailContent">
+                  정말 많이 쓰지만 정말 잘 못외우는 가상 클래스와 가상 요소.
+                  <br />
+                  정말 많이 쓰기 때문에 꼭 외워야 한다.
+                  <ol>
+                    <li>
+                      가상 클래스, 가상 요소
+                      <ul>
+                        <li>실제로 존재하지 않는 요소</li>
+                        <li>존재한다고 가정하고 선택하는 방법</li>
+                        <li>요소의 상태를 이용하여 선택자를 지정</li>
+                        <li>가상 클래스 앞에 : 기호를 붙여서 사용</li>
+                        <li>
+                          사용자의 동작에 반응하는 가상 클래스 선택자 <br />
+                          - 링크 가상 클래스 선택자
+                          <ul>
+                            <li>
+                              :link - 링크를 한 번도 방문한 적이 없는 상태
+                            </li>
+                            <li>
+                              :visited - 링크를 한 번 이상 방문한 적이 있는 상태
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          동적 가상 클래스 선택자
+                          <ul>
+                            <li>:hover - 마우스를 올린 상태</li>
+                            <li>:active - 마우스로 클릭한 상태</li>
+                          </ul>
+                        </li>
+                        <li>
+                          입력 요소 가상 클래스 선택자
+                          <ul>
+                            <li>
+                              :focus - 입력 요소에 커서가 이동하여 활성화된 상태
+                            </li>
+                            <li>
+                              :checked - 체크박스(레디오버튼) 요소에 체크한 상태
+                            </li>
+                            <li>:enabled - 상호 작용 요소가 활성화된 상태</li>
+                            <li>
+                              :disabled - 상호 작용 요소가 비활성화된 상태 -
+                              요소가 서버로 전송되지 않는다.
+                            </li>
+                            <li>:not - 특정 요소를 제외하고 스타일 적용</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      가상 요소
+                      <ul>
+                        <li>실제로 존재하지 않는 요소</li>
+                        <li>존재한다고 가정하고 선택하는 방법</li>
+                        <li>화면 꾸미기용, 웹 문서에는 포함되지 않음</li>
+                        <li>가상요소 선택자 앞에 :: 를 붙임</li>
+                        <li>
+                          형식 : 기준 선택자 :: 가상요소 선택자 { /* CSS 코드 */
+                          }
+                        </li>
+                        <li>::before - 기준 선택자의 요소의 앞 선택</li>
+                        <li>::after - 기준 선택자의 요소의 뒤가 선택</li>
+                        <li>
+                          ::first-line - 특정 요소의 첫 번째 줄에 스타일 적용
+                        </li>
+                        <li>
+                          ::first-letter - 특정 요소의 첫 번째 글자에 스타일
+                          적용
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      문서 구조에 따른 가상 클래스 선택자
+                      <ul>
+                        <li>
+                          :only-child -> 부모 안에 자식 요소가 하나뿐일 때 자식
+                          요소 선택
+                        </li>
+                        <li>
+                          A:only-type-of -> 부모 안에 A 요소가 하나뿐일 때 선택
+                        </li>
+                        <li>
+                          :first-child -> 부모 안에 있는 모든 요소 중에서 첫
+                          번째 자식 요소를 선택
+                        </li>
+                        <li>
+                          :last-child -> 부모 안에 있는 모든 요소 중에서 마지막
+                          자식 요소를 선택
+                        </li>
+                        <li>
+                          A:first-of-type -> 부모 안에 있는 A 요소 중에서 첫
+                          번째 요소를 선택
+                        </li>
+                        <li>
+                          A:last-of-type -> 부모 안에 있는 A 요소 중에서 마지막
+                          요소를 선택
+                        </li>
+                        <li>
+                          :nth-child(n) -> 부모 안에 있는 모든 요소 중에서 n
+                          번째 자식 요소를 선택
+                        </li>
+                        <li>
+                          :nth-of-type(n) -> 부모 안에 있는 모든 요소 중에서
+                          끝에서 n 번째 자식 요소를 선택
+                        </li>
+                        <li>
+                          A:nth-of-type(n) -> 부모 안에 있는 A 요소 중에서 n
+                          번째 요소를 선택
+                        </li>
+                        <li>
+                          A:nth-last-of-type(n) -> 부모 안에 있는 A 요소 중에서
+                          끝에서 n 번째 요소를 선택
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+                <div class="leftRightButton">
+                  <a href="detail8.html">
+                    <button class="viewButton">← PREVIOUS POST</button>
+                  </a>
+                  <a href="detail10.html">
+                    <button class="viewButton">NEXT POST →</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="backR">
+            <div class="backRHead">
+              <span class="backRHT" style="font-size: 20px"
+                >한덕용의 블로그</span
+              >
+              <a
+                class="backRHT"
+                style="font-size: 15px"
+                href="https://github.com/HyperQuanx?tab=repositories"
+                >My Github Repositories</a
+              >
+            </div>
+            <div class="flex">
+              <div class="categoryGroup">
+                <ul class="category">
+                  <li class="categoryQ" style="top: 170px; right: -14px">
+                    <a href="home.html">Home</a>
+                  </li>
+                  <li class="categoryQ" style="top: 220px; right: -14px">
+                    <a href="about.html">About</a>
+                  </li>
+                  <li class="categoryQ" style="top: 270px; right: -14px">
+                    <a href="posts.html">Posts</a>
+                  </li>
+                  <li class="categoryQ" style="top: 320px; right: -14px">
+                    <a href="contact.html">Contact</a>
+                  </li>
+                  <li class="categoryQ" style="top: 370px; right: -14px">
+                    <a href="login.html">Login</a>
+                  </li>
+                  <li class="categoryQ" style="top: 420px; right: -14px">
+                    <a href="personal_history.html">Persnal</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

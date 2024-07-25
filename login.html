@@ -3,83 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>내 블로그 홈</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="headerr">
-      <nav>
-        <div class="chunjae">
-          <a href="home.html">천 재 덕 용</a>
-        </div>
-        <div>
-          <ul class="hyperLink">
-            <a href="home.html">
-              <li>Home</li>
-            </a>
-            <a href="about.html">
-              <li>ABOUT</li>
-            </a>
-            <a href="posts.html">
-              <li>POST</li>
-            </a>
-            <a href="contact.html">
-              <li>CONTACT</li>
-            </a>
-            <a href="login.html">
-              <li>LOGIN</li>
-            </a>
-            <a href="images/한덕용 이력서.pdf" target="_blank">
-              <li>PERSNAL</li>
-            </a>
-          </ul>
-        </div>
-      </nav>
 
-      <header>
-        <div>
-          <h1 id="title" style="font-size: 80px">Login</h1>
+  <body>
+    <div class="background1">
+      <div class="background2">
+        <div class="backGroup">
+          <div class="backL">
+            <div class="backLHead">
+              <p>Today <span class="red">26</span></p>
+              <p>|</p>
+              <p>TOTAL 4623</p>
+            </div>
+            <div class="center">
+              <div class="backLMain">
+                <div>
+                  <div class="mainProfileImg"></div>
+                  <div class="feelingBox">
+                    <span class="skyColor">TODAY IS..&nbsp; </span>
+                    <span>
+                      <img class="feelingImg" src="images/smile.png" /> </span
+                    >&nbsp;기쁨
+                  </div>
+                  <div class="mainPR">
+                    <div>
+                      <div class="snippets">사이 좋은 사람들</div>
+                      <div class="snippets">천재교육</div>
+                      <div class="snippets">^_^</div>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <div class="blogLittleName inlineBlock">천재덕용</div>
+                    <div class="cyGender inlineBlock"></div>
+                  </div>
+                  <div class="blogLittleEmail">qbixroqkfwk@gmail.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="backR">
+            <div class="backRHead">
+              <span class="backRHT" style="font-size: 20px"
+                >한덕용의 블로그</span
+              >
+              <a
+                class="backRHT"
+                style="font-size: 15px"
+                href="https://github.com/HyperQuanx?tab=repositories"
+                >My Github Repositories</a
+              >
+            </div>
+            <div class="flex">
+              <div class="backRMainB">
+                <div class="backRMain">
+                  <div class="loginTitle">Login</div>
+                  <div class="center">
+                    <div class="loginBox">
+                      <form action="#" class="formBox">
+                        <div class="loginTalk">로그인 부탁드립니다</div>
+                        <div class="inputId">
+                          <input
+                            class="id"
+                            placeholder="아이디 또는 이메일을 입력해주세요"
+                            required
+                          />
+                        </div>
+                        <div class="inputPw">
+                          <input
+                            class="pw"
+                            placeholder="영문+숫자+특수문자조합"
+                            type="password"
+                            required
+                          />
+                        </div>
+                        <button class="sendB">Send</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="categoryGroup">
+                <ul class="category">
+                  <li class="categoryQ" style="top: 170px">
+                    <a href="home.html">Home</a>
+                  </li>
+                  <li class="categoryQ" style="top: 220px">
+                    <a href="about.html">About</a>
+                  </li>
+                  <li class="categoryQ" style="top: 270px">
+                    <a href="posts.html">Posts</a>
+                  </li>
+                  <li class="categoryQ" style="top: 320px">
+                    <a href="contact.html">Contact</a>
+                  </li>
+                  <li
+                    class="categoryQ categorySB bLW"
+                    style="top: 370px; right: -14px"
+                  >
+                    <a href="login.html" style="color: black">Login</a>
+                  </li>
+                  <li class="categoryQ" style="top: 420px">
+                    <a href="personal_history.html">Persnal</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </header>
+      </div>
     </div>
-    <main class="main">
-      <div>
-        <p id="loginMessage">로그인</p>
-        <div class="contactInputGroup">
-          <input id="contactInput" placeholder="Name" required />
-          <input
-            id="contactInput"
-            placeholder="영문+숫자+특수문자조합"
-            type="password"
-            required
-          />
-        </div>
-        <button id="sendButton">SEND</button>
-      </div>
-    </main>
-    <footer>
-      <hr />
-      <div class="socialGroup">
-        <a href="https://www.youtube.com/watch?v=KRaWnd3LJfs" target="_blank">
-          <div id="phone"></div>
-        </a>
-        <a
-          href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=email"
-          target="_blank"
-        >
-          <div id="email"></div>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <div id="insta"></div>
-        </a>
-        <a
-          href="https://github.com/HyperQuanx?tab=repositories"
-          target="_blank"
-        >
-          <div id="github"></div>
-        </a>
-      </div>
-      <div id="copyRight">Copyright ⓒ All right reserved</div>
-    </footer>
   </body>
 </html>
