@@ -34,6 +34,8 @@ body {
 }
 
 .ccenter {
+  width: 920px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,6 +81,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.backPer {
+  background-color: #f1f1f1;
+  width: 1350px;
+  height: 700px;
+  border-radius: 9px;
+  margin: 0;
 }
 
 .backL {
@@ -643,3 +653,63 @@ p {
 .pageC {
   font-size: 16px;
 }
+
+.folderLayout {
+  width: 80%;
+  height: 550px;
+  border: 10px groove #b4d1da;
+  border-radius: 20px;
+  box-shadow: #00bfff 5px 5px 5px 5px;
+}
+
+.folderToggleGroup {
+  margin-left: 30px;
+}
+
+.folderToggleTitle {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 50px;
+}
+
+.folderLayout > ul {
+  list-style: none;
+  padding: 0;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  cursor: zoom-in;
+}
+
+.folderLayout > ul > li > details > ul {
+  list-style: none;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.folderLayout > ul > li {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.folderToggle {
+  font-size: 40px;
+  list-style-image: url(images/folderQ.jpg);
+}
+
+.myPRLink {
+  text-decoration: none;
+  color: #00bfff;
+}
+
+.myPRLink:active {
+  color: blue;
+}
+
+/* .folderToggle:active {
+  list-style-image: url(images/icon/free-icon-pdf-179483.png);
+} */
