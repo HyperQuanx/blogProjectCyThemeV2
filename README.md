@@ -9,7 +9,7 @@
 
 <p>
 
-글 Post ( text 코드를 작성하면
+글 Post ( text 코드를 작성하면 )
 
 </p>
 <p>
