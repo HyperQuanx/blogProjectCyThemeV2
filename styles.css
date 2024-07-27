@@ -33,6 +33,12 @@ body {
   justify-content: center;
 }
 
+.doubleCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ccenter {
   width: 920px;
   height: 100%;
@@ -56,8 +62,8 @@ body {
 
 .background1 {
   background-color: #b4d1da;
-  border-radius: 9px;
   border: 1px solid #738186;
+  border-radius: 9px;
   width: 1450px;
   height: 800px;
   position: relative;
@@ -81,6 +87,43 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.backgroundResume {
+  height: 100vh;
+}
+
+.backgroundResumeBase {
+  width: 820px;
+  height: 900px;
+  background-color: #b4d1da;
+  border: 1px solid #738186;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundResumeDotted {
+  width: 770px;
+  height: 850px;
+  border: 2px dashed white;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundResumeContent {
+  width: 720px;
+  height: 800px;
+  background-color: white;
+  border-radius: 9px;
+  border: 2px solid #d4d4d4;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .backPer {
@@ -713,3 +756,193 @@ p {
 /* .folderToggle:active {
   list-style-image: url(images/icon/free-icon-pdf-179483.png);
 } */
+
+.developerImg {
+  width: 50px;
+  height: 50px;
+}
+
+.bRMC {
+  width: 700px;
+  height: 780px;
+  overflow: auto;
+}
+
+.rmcT {
+  font-size: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.resumePR {
+  display: flex;
+  height: 260px;
+}
+
+.prImg {
+  width: 200px;
+  float: left;
+  border: 1px solid rgb(138, 136, 136);
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.prText {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 20px 0px 20px;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: fadeIn 2s forwards;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.prInformation {
+  width: 350px;
+  border-collapse: collapse;
+  position: relative;
+  margin-top: 20px;
+}
+
+.prInformation th,
+.prInformation td {
+  border-bottom: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+.perItem {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.perItemT {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.table {
+  width: 96%;
+  margin-top: 20px;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.skillList {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.skillList table {
+  width: 96%;
+  border-collapse: collapse;
+}
+
+.skillList th,
+.skillList td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.skillList th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+td img {
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 4px;
+}
+
+.projectTable table {
+  width: 96%;
+  border-collapse: collapse;
+  border: 1px solid #8066d1;
+}
+
+.projectTable th,
+.projectTable td {
+  border: 1px solid #8066d1;
+  padding: 8px;
+  text-align: left;
+}
+
+.projectTable th {
+  background-color: #f2f2f2;
+}
+
+.projectTable .nowrap {
+  white-space: nowrap;
+}
+
+.ncColor {
+  color: #8066d1;
+}
+
+.backPer {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b4d1da;
+  border: 1px solid #738186;
+  border-left: none;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  font-size: 25px;
+  top: 480px;
+  right: 449px;
+}
+
+.backPer a {
+  color: white;
+  text-decoration: none;
+}
