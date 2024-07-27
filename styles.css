@@ -60,6 +60,10 @@ body {
   font-weight: bold;
 }
 
+.marT10px {
+  margin-top: 10px;
+}
+
 .background1 {
   background-color: #b4d1da;
   border: 1px solid #738186;
@@ -162,6 +166,14 @@ body {
   justify-content: center;
   overflow: hidden;
   overflow: auto;
+}
+
+.backB {
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  width: 1270px;
+  height: 720px;
+  margin: 0;
 }
 
 .backLHead {
@@ -439,7 +451,11 @@ p {
 }
 
 .postAtag {
-  color: #00bfff;
+  color: #359dc2;
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
 }
 
 .posts {
@@ -617,6 +633,8 @@ p {
   font-size: 25px;
   overflow: hidden;
   overflow: auto;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .leftRightButton {
@@ -945,4 +963,148 @@ td img {
 .backPer a {
   color: white;
   text-decoration: none;
+}
+
+.bookSection input[id*="slide"] {
+  display: none;
+}
+
+.bookSection .bookSlideWrap {
+  margin: 0 auto;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.bookSection .bookSlideList {
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.bookSection .bookSlideList > li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.bookSection .bookSlideList > li > a {
+  display: block;
+  position: relative;
+}
+
+.bookSection .bookSlideList > li > a img {
+  width: 100%;
+}
+
+.bookSection .bookSlideList label {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  cursor: pointer;
+}
+
+.bookSection .bookSlideList .left {
+  left: 150px;
+  background: url(images/leftArrow.png) center center / 100% no-repeat;
+}
+
+.bookSection .bookSlideList .right {
+  right: 150px;
+  background: url(images/rightArrow.png) center center / 100% no-repeat;
+}
+
+.bookSection [id="slide1"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(0%);
+}
+
+.bookSection [id="slide2"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(-100%);
+}
+
+.bookSection [id="slide3"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(-200%);
+}
+
+.bookSection [id="slide4"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(-300%);
+}
+
+.bookSection [id="slide5"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(-400%);
+}
+
+.bookSection [id="slide6"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(-500%);
+}
+
+.bookSection [id="slide7"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(-600%);
+}
+
+.bookSection [id="slide8"]:checked ~ .bookSlideWrap .bookSlideList > li {
+  transform: translateX(-700%);
+}
+
+.bookSection .bookSlideControl [class*="control"] {
+  display: none;
+}
+
+.bookSection [id="slide1"]:checked ~ .bookSlideWrap .control1 {
+  display: block;
+}
+
+.bookSection [id="slide2"]:checked ~ .bookSlideWrap .control2 {
+  display: block;
+}
+
+.bookSection [id="slide3"]:checked ~ .bookSlideWrap .control3 {
+  display: block;
+}
+
+.bookSection [id="slide4"]:checked ~ .bookSlideWrap .control4 {
+  display: block;
+}
+
+.bookSection [id="slide5"]:checked ~ .bookSlideWrap .control5 {
+  display: block;
+}
+
+.bookSection [id="slide6"]:checked ~ .bookSlideWrap .control6 {
+  display: block;
+}
+
+.bookSection [id="slide7"]:checked ~ .bookSlideWrap .control7 {
+  display: block;
+}
+
+.bookSection [id="slide8"]:checked ~ .bookSlideWrap .control8 {
+  display: block;
+}
+
+.bookSlideContent {
+  margin-top: 34px;
+  width: 818px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+}
+
+.textC {
+  text-align: center;
+  width: 90%;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.textMC {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
