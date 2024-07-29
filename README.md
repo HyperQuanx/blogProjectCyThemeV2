@@ -50,4 +50,9 @@ Post+, Today, Total View
 로딩창 구현
 
 </p>
+<p>
+
+프로젝트 상세 넣기
+
+</p>
 </div>
