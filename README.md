@@ -55,4 +55,9 @@ Post+, Today, Total View
 프로젝트 상세 넣기
 
 </p>
+<p>
+
+자기소개서 해리포터 신문처럼
+
+</p>
 </div>
