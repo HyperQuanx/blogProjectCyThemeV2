@@ -58,20 +58,21 @@
             <div class="flex">
               <div class="backRMainB">
                 <div class="backRMain">
-                  <div class="loginTitle">Login</div>
+                  <div class="loginTitle">Sign up</div>
                   <div class="center">
                     <div class="loginBox">
                       <div class="loginContent">
                         <div>
-                          <form action="#" class="formBox">
-                            <div class="loginTalk">로그인 부탁드립니다</div>
+                          <div class="formBox">
+                            <div class="loginTalk">회원 정보 입력</div>
                             <div class="input">
                               <input
                                 class="id"
-                                placeholder="이메일을 입력해주세요"
+                                placeholder="이메일을 입력해주세요."
                                 required
                                 autofocus
                                 value=""
+                                id="signId"
                               />
                               <div class="validation">정규식 넣을 자리</div>
                             </div>
@@ -80,20 +81,27 @@
                                 class="pw"
                                 placeholder="영문+숫자+특수문자조합"
                                 type="password"
-                                required
                                 value=""
+                                id="singPw"
                               />
                               <div class="validation">정규식 넣을 자리</div>
                             </div>
-                            <button class="sendB" id="submit">Login</button>
-                          </form>
-                          <div class="stringCenter signUpMsg">
-                            아직 계정이 없으신가요?
+                            <div class="input">
+                              <input
+                                class="id"
+                                placeholder="사용할 닉네임을 입력해주세요."
+                                value=""
+                                id="signNn"
+                              />
+                              <div class="validation">정규식 넣을 자리</div>
+                            </div>
+                            <button class="sendB" id="submitSign">
+                              Sign up
+                            </button>
                           </div>
-                          <div class="stringCenter" style="margin-top: 25px">
-                            <a href="signup.html" class="singUpLink">
-                              회원가입
-                            </a>
+
+                          <div class="stringCenter">
+                            <a href="login.html" class="singUpLink"> 로그인 </a>
                             <span style="color: #888">|</span>
                             <a
                               href="https://policy.naver.com/rules/service.html"
@@ -140,6 +148,35 @@
       </div>
     </div>
 
-    <script></script>
+    <script>
+      document.querySelector("#submitSign").addEventListener("click", () => {
+        localStorage.setItem(
+          "id",
+          `${document.querySelector("#signId").value}`
+        );
+        localStorage.setItem(
+          "nn",
+          `${document.querySelector("#signNn").value}`
+        );
+        alert(
+          `회원가입 완료되었습니다.\n${localStorage.getItem(
+            "nn"
+          )}님 환영합니다!`
+        );
+        location.assign("login.html");
+      });
+
+      // let logout = () => {
+      //   localStorage.clear();
+      //   alert(`로그아웃 되었습니다.`);
+      //   location.reload();
+      // };
+
+      // if (localStorage.getItem("id") === null) {
+      //   document.write("로그인 해주세요");
+      // } else {
+      //   document.write(localStorage.getItem("id"));
+      // }
+    </script>
   </body>
 </html>

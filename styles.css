@@ -24,6 +24,10 @@ body {
   background-repeat: repeat;
 }
 
+.stringCenter {
+  text-align: center;
+}
+
 .flex {
   display: flex;
 }
@@ -545,7 +549,6 @@ p {
 }
 
 .sendB {
-  margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: #00bfff;
@@ -558,8 +561,27 @@ p {
   border-radius: 2px;
 }
 
+.signUpMsg {
+  text-decoration: underline;
+  font-size: 20px;
+  color: #888;
+}
+
+.singUpLink {
+  text-decoration: none;
+  color: #00bfff;
+}
+
+.input {
+  height: 95px;
+}
+
 .formBox {
   width: 400px;
+}
+
+.validation {
+  font-size: 16px;
 }
 
 .loginTitle {
@@ -588,6 +610,7 @@ p {
 .loginTalk {
   text-align: center;
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .id {
@@ -598,7 +621,7 @@ p {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  padding: 20px 20px 0 20px;
+  padding-left: 20px;
 }
 
 .id:focus {
@@ -613,7 +636,7 @@ p {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  padding: 20px 20px 0 20px;
+  padding-left: 20px;
 }
 
 .detailTitle {
@@ -863,7 +886,6 @@ p {
 
 .table table {
   width: 100%;
-  
 }
 
 .table th,
