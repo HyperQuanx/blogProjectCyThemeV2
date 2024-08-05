@@ -45,9 +45,7 @@
           </div>
           <div class="backR">
             <div class="backRHead">
-              <span class="backRHT" style="font-size: 20px"
-                >한덕용의 블로그</span
-              >
+              <span class="backRHT" style="font-size: 20px" id="nick"></span>
               <a
                 class="backRHT"
                 style="font-size: 15px"
@@ -73,8 +71,9 @@
                                 autofocus
                                 value=""
                                 id="signId"
+                                oninput="idInput()"
                               />
-                              <div class="validation">정규식 넣을 자리</div>
+                              <div class="validation" id="val1"></div>
                             </div>
                             <div class="input">
                               <input
@@ -83,8 +82,11 @@
                                 type="password"
                                 value=""
                                 id="singPw"
+                                oninput="pwInput()"
                               />
-                              <div class="validation">정규식 넣을 자리</div>
+                              <div class="validation" id="val2">
+                                정규식 넣을 자리
+                              </div>
                             </div>
                             <div class="input">
                               <input
@@ -92,8 +94,11 @@
                                 placeholder="사용할 닉네임을 입력해주세요."
                                 value=""
                                 id="signNn"
+                                oninput="nnInput()"
                               />
-                              <div class="validation">정규식 넣을 자리</div>
+                              <div class="validation" id="val3">
+                                정규식 넣을 자리
+                              </div>
                             </div>
                             <button class="sendB" id="submitSign">
                               Sign up
@@ -149,6 +154,18 @@
     </div>
 
     <script>
+      let idInput = () => {
+        let idI = document.querySelector("#signId").value;
+        let writeId = document.querySelector("#val1");
+        if (idI.length < 5 || idI.length > 10) {
+          writeId.innerText = "잘못된 값";
+          writeId.style.color = "red";
+        } else {
+          writeId.innerText = "완료";
+          writeId.style.color = "blue";
+        }
+      };
+
       document.querySelector("#submitSign").addEventListener("click", () => {
         localStorage.setItem(
           "id",
@@ -159,7 +176,7 @@
           `${document.querySelector("#signNn").value}`
         );
         alert(
-          `회원가입 완료되었습니다.\n${localStorage.getItem(
+          `회원가입이 완료되었습니다.\n${localStorage.getItem(
             "nn"
           )}님 환영합니다!`
         );
@@ -177,6 +194,8 @@
       // } else {
       //   document.write(localStorage.getItem("id"));
       // }
+      let nickName = document.querySelector("#nick");
+      nickName.innerHTML(`반갑습니다`);
     </script>
   </body>
 </html>
