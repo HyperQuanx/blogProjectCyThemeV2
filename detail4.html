@@ -44,9 +44,11 @@
           </div>
           <div class="backR">
             <div class="backRHead">
-              <span class="backRHT" style="font-size: 20px"
-                >한덕용의 블로그</span
-              >
+              <span
+                class="backRHT"
+                style="font-size: 20px"
+                id="userNickName"
+              ></span>
               <a
                 class="backRHT"
                 style="font-size: 15px"
@@ -82,5 +84,9 @@
         </div>
       </div>
     </div>
+    <script>
+      let nick = document.querySelector("#userNickName");
+      nick.innerText = `${localStorage.getItem("nn")}의 블로그`;
+    </script>
   </body>
 </html>

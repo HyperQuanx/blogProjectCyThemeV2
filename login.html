@@ -45,9 +45,11 @@
           </div>
           <div class="backR">
             <div class="backRHead">
-              <span class="backRHT" style="font-size: 20px"
-                >한덕용의 블로그</span
-              >
+              <span
+                class="backRHT"
+                style="font-size: 20px"
+                id="userNickName"
+              ></span>
               <a
                 class="backRHT"
                 style="font-size: 15px"
@@ -72,20 +74,34 @@
                                 required
                                 autofocus
                                 value=""
+                                id="signId"
+                                oninput="idInput()"
                               />
-                              <div class="validation">정규식 넣을 자리</div>
+                              <div class="validation" id="val1"></div>
                             </div>
                             <div class="input">
                               <input
                                 class="pw"
-                                placeholder="영문+숫자+특수문자조합"
+                                placeholder="비밀번호를 입력해주세요"
                                 type="password"
                                 required
                                 value=""
+                                id="signPw"
+                                oninput="pwInput()"
                               />
-                              <div class="validation">정규식 넣을 자리</div>
+                              <div class="validation" id="val2"></div>
                             </div>
-                            <button class="sendB" id="submit">Login</button>
+                            <button
+                              class="sendB"
+                              id="submitSign"
+                              style="
+                                background-color: #808080;
+                                cursor: not-allowed;
+                              "
+                              disabled
+                            >
+                              Login
+                            </button>
                           </form>
                           <div class="stringCenter signUpMsg">
                             아직 계정이 없으신가요?
@@ -140,6 +156,166 @@
       </div>
     </div>
 
-    <script></script>
+    <script>
+      let numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let engList = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+      let speList = ["!", "@", "#", "$", "%", "^", "&", "*"];
+
+      let idB = false;
+      let pwB = false;
+      let numB = false;
+      let engB = false;
+      let speB = false;
+
+      let idInput = () => {
+        let idI = document.querySelector("#signId").value;
+        let write1 = document.querySelector("#val1");
+        if (
+          idI.indexOf("@") == -1 ||
+          (idI.indexOf(".com") == -1 && idI.indexOf(".net") == -1)
+        ) {
+          write1.innerText = "이메일 형식으로 입력해주세요.";
+          write1.style.color = "red";
+          idB = false;
+        } else {
+          write1.innerText = "완료";
+          write1.style.color = "#00bfff";
+          idB = true;
+        }
+        enableButton();
+      };
+
+      let pwInput = () => {
+        let pwI = document.querySelector("#signPw").value;
+        let write2 = document.querySelector("#val2");
+        for (let i = 0; i < numList.length; i++) {
+          if (pwI.includes(numList[i])) {
+            numB = true;
+            break;
+          } else {
+            numB = false;
+          }
+        }
+
+        for (let j = 0; j < engList.length; j++) {
+          if (pwI.includes(engList[j])) {
+            engB = true;
+            break;
+          } else {
+            engB = false;
+          }
+        }
+
+        for (let k = 0; k < speList.length; k++) {
+          if (pwI.includes(speList[k])) {
+            speB = true;
+            break;
+          } else {
+            speB = false;
+          }
+        }
+
+        if (numB && engB && speB && pwI.length >= 8 && pwI.length <= 20) {
+          write2.innerText = "완료";
+          write2.style.color = "#00bfff";
+          pwB = true;
+        } else {
+          write2.innerText = "숫자+영문+특수문자 8 ~ 20자리";
+          write2.style.color = "red";
+          pwB = false;
+        }
+        enableButton();
+      };
+
+      let enableButton = () => {
+        let buttonChange = document.querySelector("#submitSign");
+        if (idB && pwB) {
+          buttonChange.style.color = "white";
+          buttonChange.style.backgroundColor = "#00bfff";
+          buttonChange.style.cursor = "pointer";
+          buttonChange.disabled = false;
+        } else {
+          buttonChange.style.color = "white";
+          buttonChange.style.backgroundColor = "#808080";
+        }
+      };
+
+      document.querySelector("#submitSign").addEventListener("click", (e) => {
+        e.preventDefault();
+        let inpId = document.querySelector("#signId").value;
+        let inpPw = document.querySelector("#signPw").value;
+        let saveId = localStorage.getItem("id");
+        let savePw = localStorage.getItem("pw");
+
+        if (inpId == saveId && inpPw == savePw) {
+          alert(
+            `로그인이 완료되었습니다.\n${localStorage.getItem(
+              "nn"
+            )}님 환영합니다!`
+          );
+          location.assign("home.html");
+          console.log("asd");
+        } else {
+          alert(`아이디와 비밀번호를 확인해주세요`);
+        }
+      });
+    </script>
+    <script>
+      let nick = document.querySelector("#userNickName");
+      nick.innerText = `${localStorage.getItem("nn")}의 블로그`;
+    </script>
   </body>
 </html>

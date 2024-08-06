@@ -78,15 +78,13 @@
                             <div class="input">
                               <input
                                 class="pw"
-                                placeholder="영문+숫자+특수문자조합"
+                                placeholder="비밀번호를 입력해주세요"
                                 type="password"
                                 value=""
-                                id="singPw"
+                                id="signPw"
                                 oninput="pwInput()"
                               />
-                              <div class="validation" id="val2">
-                                정규식 넣을 자리
-                              </div>
+                              <div class="validation" id="val2"></div>
                             </div>
                             <div class="input">
                               <input
@@ -96,11 +94,17 @@
                                 id="signNn"
                                 oninput="nnInput()"
                               />
-                              <div class="validation" id="val3">
-                                정규식 넣을 자리
-                              </div>
+                              <div class="validation" id="val3"></div>
                             </div>
-                            <button class="sendB" id="submitSign">
+                            <button
+                              class="sendB"
+                              id="submitSign"
+                              style="
+                                background-color: #808080;
+                                cursor: not-allowed;
+                              "
+                              disabled
+                            >
                               Sign up
                             </button>
                           </div>
@@ -154,15 +158,155 @@
     </div>
 
     <script>
+      let numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let engList = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+      let speList = ["!", "@", "#", "$", "%", "^", "&", "*"];
+
+      let idB = false;
+      let pwB = false;
+      let nnB = false;
+      let numB = false;
+      let engB = false;
+      let speB = false;
+
       let idInput = () => {
         let idI = document.querySelector("#signId").value;
-        let writeId = document.querySelector("#val1");
-        if (idI.length < 5 || idI.length > 10) {
-          writeId.innerText = "잘못된 값";
-          writeId.style.color = "red";
+        let write1 = document.querySelector("#val1");
+        if (
+          idI.indexOf("@") == -1 ||
+          (idI.indexOf(".com") == -1 && idI.indexOf(".net") == -1)
+        ) {
+          write1.innerText = "이메일 형식으로 입력해주세요.";
+          write1.style.color = "red";
+          idB = false;
         } else {
-          writeId.innerText = "완료";
-          writeId.style.color = "blue";
+          write1.innerText = "완료";
+          write1.style.color = "#00bfff";
+          idB = true;
+        }
+        enableButton();
+      };
+
+      let pwInput = () => {
+        let pwI = document.querySelector("#signPw").value;
+        let write2 = document.querySelector("#val2");
+        for (let i = 0; i < numList.length; i++) {
+          if (pwI.includes(numList[i])) {
+            numB = true;
+            break;
+          } else {
+            numB = false;
+          }
+        }
+
+        for (let j = 0; j < engList.length; j++) {
+          if (pwI.includes(engList[j])) {
+            engB = true;
+            break;
+          } else {
+            engB = false;
+          }
+        }
+
+        for (let k = 0; k < speList.length; k++) {
+          if (pwI.includes(speList[k])) {
+            speB = true;
+            break;
+          } else {
+            speB = false;
+          }
+        }
+
+        if (numB && engB && speB && pwI.length >= 8 && pwI.length <= 20) {
+          write2.innerText = "완료";
+          write2.style.color = "#00bfff";
+          pwB = true;
+        } else {
+          write2.innerText = "숫자+영문+특수문자 8 ~ 20자리";
+          write2.style.color = "red";
+          pwB = false;
+        }
+        enableButton();
+      };
+
+      let nnInput = () => {
+        let nnI = document.querySelector("#signNn").value;
+        let write3 = document.querySelector("#val3");
+        if (nnI.length < 2 || nnI.length > 8) {
+          write3.innerText = "한글+영문 2 ~ 8자리";
+          write3.style.color = "red";
+          nnB = false;
+        } else {
+          write3.innerText = "완료";
+          write3.style.color = "#00bfff";
+          nnB = true;
+        }
+        enableButton();
+      };
+
+      let enableButton = () => {
+        let buttonChange = document.querySelector("#submitSign");
+        if (idB && pwB && nnB) {
+          buttonChange.style.color = "white";
+          buttonChange.style.backgroundColor = "#00bfff";
+          buttonChange.style.cursor = "pointer";
+          buttonChange.disabled = false;
+        } else {
+          buttonChange.style.color = "white";
+          buttonChange.style.backgroundColor = "#808080";
         }
       };
 
@@ -170,6 +314,10 @@
         localStorage.setItem(
           "id",
           `${document.querySelector("#signId").value}`
+        );
+        localStorage.setItem(
+          "pw",
+          `${document.querySelector("#signPw").value}`
         );
         localStorage.setItem(
           "nn",
@@ -194,8 +342,10 @@
       // } else {
       //   document.write(localStorage.getItem("id"));
       // }
-      let nickName = document.querySelector("#nick");
-      nickName.innerHTML(`반갑습니다`);
+    </script>
+    <script>
+      let nick = document.querySelector("#userNickName");
+      nick.innerText = `${localStorage.getItem("nn")}의 블로그`;
     </script>
   </body>
 </html>

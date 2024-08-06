@@ -12,7 +12,7 @@
         <div class="backgroundResumeDotted">
           <div class="backgroundResumeContent">
             <div class="backgroundResumeMain">
-              <div class="bRMC">
+              <div class="bRMC" id="mainContent">
                 <div class="flex">
                   <h3 class="rmcT">Developer_한덕용</h3>
                   <table class="prInformation">
@@ -211,29 +211,44 @@
                 </div>
                 <div class="perItem">
                   <div class="perItemT">프로젝트 경험</div>
-                  <h3>프로젝트 명 : <span class="ncColor">Nine Cloud</span></h3>
+                  <h3>
+                    프로젝트 명 :
+                    <img
+                      src="https://github.com/final-project-hh99/front/assets/128838463/1c4c52a9-e233-48d3-8392-d43a9b906cde"
+                      alt="nineCloudIcon"
+                      class="niClIcon"
+                    /><span class="ncColor">Nine Cloud</span>
+                  </h3>
                   <div class="projectTable">
                     <table>
                       <tr>
-                        <th class="nowrap">작업 기간</th>
-                        <td>2023.11 ~ 2024.01 (2개월)</td>
+                        <th class="nowrap" id="nowrap1" onclick="scroll1()">
+                          작업 기간
+                        </th>
+                        <td>2023.12.01 ~ 2024.01.12 (약 2개월)</td>
                       </tr>
                       <tr>
-                        <th class="nowrap">인력 구성</th>
+                        <th class="nowrap" id="nowrap2" onclick="scroll2()">
+                          인력 구성
+                        </th>
                         <td>
                           한덕용(FE), 주철민(FE), 송지우(FE), 유재현(BE),
                           이찬영(BE), 이승연(Design)
                         </td>
                       </tr>
                       <tr>
-                        <th class="nowrap">프로젝트 목적</th>
+                        <th class="nowrap" id="nowrap3" onclick="scroll3()">
+                          프로젝트 요약
+                        </th>
                         <td>
-                          여유가 없는 현대인들을 위해 자신의 하루를 돌아볼 수
-                          있는 웹 앱 감정일기 제작
+                          매일 하나의 일기를 작성하며 자신의 감정을 되돌아보고
+                          AI 솔루션을 받는 감정일기 서비스
                         </td>
                       </tr>
                       <tr>
-                        <th class="nowrap">주요업무 및 상세역할</th>
+                        <th class="nowrap" id="nowrap4" onclick="scroll4()">
+                          주요 업무 및 상세역할
+                        </th>
                         <td>
                           - Onboarding 페이지<br />
                           - Sign in / Sign Up 페이지<br />
@@ -245,14 +260,19 @@
                         </td>
                       </tr>
                       <tr>
-                        <th class="nowrap">사용언어 및 개발환경</th>
+                        <th class="nowrap" id="nowrap5" onclick="scroll5()">
+                          사용 언어 및 개발환경
+                        </th>
                         <td>
                           Languages: Javascript, Typescript<br />
-                          라이브러리/프레임워크: React, styled-components, Axios
+                          라이브러리/프레임워크: React, styled-components,
+                          Axios등
                         </td>
                       </tr>
                       <tr>
-                        <th class="nowrap">프로젝트 결과 정리</th>
+                        <th class="nowrap" id="nowrap6" onclick="scroll6()">
+                          프로젝트 결과 정리
+                        </th>
                         <td>
                           서비스 기간 총 이용자 146 명의 가입 유저, 648 개의
                           게시물, 70%의 유저활족도, 항해 99 최고의 인기 프로젝트
@@ -260,7 +280,9 @@
                         </td>
                       </tr>
                       <tr>
-                        <th class="nowrap">참고자료</th>
+                        <th class="nowrap" id="nowrap7" onclick="scroll7()">
+                          참고자료
+                        </th>
                         <td>
                           - 서비스 링크 :
                           <a
@@ -279,13 +301,175 @@
                       </tr>
                     </table>
                   </div>
+                  <div>
+                    <video
+                      class="proVideo"
+                      src="images/nineCloudProjectVideo.mp4"
+                      controls
+                      loop
+                    ></video>
+                  </div>
+                  <div class="stringCenter marB50px">
+                    <h3>
+                      <img
+                        src="https://github.com/final-project-hh99/front/assets/128838463/1c4c52a9-e233-48d3-8392-d43a9b906cde"
+                        alt="nineCloudIcon"
+                        class="niClIcon"
+                      />
+                      프로젝트 발표 영상
+                    </h3>
+                  </div>
+                  <div>
+                    <img
+                      src="https://github.com/final-project-hh99/front/assets/128838463/d20a665d-8ae0-491e-b7c9-3eae03dde7ab"
+                      alt="인기상"
+                      class="publicPrize"
+                    />
+                  </div>
+                  <div class="stringCenter marB50px">
+                    <h3>
+                      <img
+                        src="https://github.com/final-project-hh99/front/assets/128838463/1c4c52a9-e233-48d3-8392-d43a9b906cde"
+                        alt="nineCloudIcon"
+                        class="niClIcon"
+                      />
+                      항해99 최고의 인기 프로젝트상 수상
+                    </h3>
+                  </div>
+                  <div>
+                    <img
+                      src="https://github.com/final-project-hh99/front/assets/128838463/d20a665d-8ae0-491e-b7c9-3eae03dde7ab"
+                      alt="인기상"
+                      class="publicPrize"
+                    />
+                  </div>
+                  <div class="stringCenter marB50px">
+                    <h3>
+                      <img
+                        src="https://github.com/final-project-hh99/front/assets/128838463/1c4c52a9-e233-48d3-8392-d43a9b906cde"
+                        alt="nineCloudIcon"
+                        class="niClIcon"
+                      />
+                      항해99 최고의 인기 팀원상 수상
+                    </h3>
+                  </div>
+                  <div>
+                    <h3 class="marT50px">인력 구성</h3>
+                    <img src="images/ppt1.png" alt="ppt1" class="publicPrize" />
+                  </div>
+                  <div class="marT50px">
+                    <h3>프로젝트 소개</h3>
+                    <img src="images/ppt2.png" alt="ppt2" class="publicPrize" />
+                  </div>
+                  <div>
+                    <h3 class="marT50px">주요 업무 및 상세역할</h3>
+                    <div>
+                      <div class="center">
+                        <div>
+                          <div class="imgIntro marT50px">소셜 로그인</div>
+                          <img
+                            src="https://github.com/final-project-hh99/front/assets/128838463/fdfeb65f-2a27-4ba3-b996-d46afe118add"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="center">
+                        <div>
+                          <div class="imgIntro marT50px">채팅방</div>
+                          <img
+                            src="https://github.com/final-project-hh99/front/assets/128838463/e128d55b-27bc-49c5-b26c-76967e401a1c"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        현재 서버가 닫혀 이 사진들밖에 없는 점 양해 부탁드립니다
+                        ㅠㅠ..
+                      </div>
+                    </div>
+                  </div>
+                  <div class="marT50px">
+                    <h3>사용 언어 및 개발환경</h3>
+                    <img
+                      src="images/screen.png"
+                      alt="frontSkill"
+                      class="publicPrize"
+                    />
+                  </div>
+                  <div class="marT50px">
+                    <h3>프로젝트 결과 정리</h3>
+                    <img
+                      src="images/ppt3.png"
+                      alt="frontSkill"
+                      class="publicPrize"
+                    />
+                    <img
+                      src="images/ppt4.png"
+                      alt="frontSkill"
+                      class="publicPrize"
+                    />
+                    <img
+                      src="images/ppt5.png"
+                      alt="frontSkill"
+                      class="publicPrize"
+                    />
+                    <img
+                      src="images/ppt6.png"
+                      alt="frontSkill"
+                      class="publicPrize"
+                    />
+                    <img
+                      src="images/ppt7.png"
+                      alt="frontSkill"
+                      class="publicPrize"
+                    />
+                  </div>
+                  <div class="marT50px">
+                    <h3>감사합니다</h3>
+                    <img
+                      src="images/ppt8.png"
+                      alt="frontSkill"
+                      class="publicPrize"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div style="position: relative">
+        <div class="backPer" style="left: -1px; top: 0px">
+          <a href="personal.html">Back</a>
+        </div>
+      </div>
     </div>
-    <div class="backPer"><a href="personal.html">Back</a></div>
+    <script>
+      // document.querySelector("#nowrap1").addEventListener("click", () => {
+
+      // });
+      let main = document.querySelector("#mainContent");
+      let scroll1 = () => {
+        main.scrollTo({ top: 2150, behavior: "smooth" });
+      };
+      let scroll2 = () => {
+        main.scrollTo({ top: 3800, behavior: "smooth" });
+      };
+      let scroll3 = () => {
+        main.scrollTo({ top: 4250, behavior: "smooth" });
+      };
+      let scroll4 = () => {
+        main.scrollTo({ top: 4700, behavior: "smooth" });
+      };
+      let scroll5 = () => {
+        main.scrollTo({ top: 6950, behavior: "smooth" });
+      };
+      let scroll6 = () => {
+        main.scrollTo({ top: 7160, behavior: "smooth" });
+      };
+      let scroll7 = () => {
+        main.scrollTo({ top: 9000, behavior: "smooth" });
+      };
+    </script>
   </body>
 </html>
