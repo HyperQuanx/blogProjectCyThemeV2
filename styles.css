@@ -271,11 +271,12 @@ p {
 }
 
 .cyGender {
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
+  padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
-  background-image: url(images/cyworldGender.png);
+  background-image: url(images/free-icon-male-gender-3573617.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -393,6 +394,7 @@ p {
   border-bottom-right-radius: 10px;
   font-size: 25px;
   border-left: 0;
+  cursor: pointer;
 }
 
 .categorySB {
@@ -527,6 +529,7 @@ p {
 
 .inputGroup {
   margin-top: 20px;
+  height: 400px;
 }
 
 .inputStyle {
@@ -558,6 +561,7 @@ p {
 }
 
 .sendB {
+  margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: #00bfff;

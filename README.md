@@ -1,63 +1,65 @@
-# cyworldBlogProject
+
 
 <div align="center">
 <p>
 
-기능 추가 목록
+회원가입, 로그인 가능
 
 </p>
 
 <p>
 
-글 Post ( text 코드를 작성하면 )
-
-</p>
-<p>
-Post+, Today, Total View
+contact, Login, Sign up validation 가능.
 
 </p>
 <p>
 
-새 글 자연스레 쌓이게 하기
+모든 유효성 검사를 거쳐야 버튼 활성화
 
 </p>
 <p>
 
-책 넘기기 css
+로그인, 회원가입은 DB의 부재로 LocalStorage 방식으로 구현
 
 </p>
 <p>
 
-동적인 이력서
-
-</p>
-<p>
-기분, 한줄 소개 edit
+a 태그 214개
 
 </p>
 <p>
 
-테마 변경
+
 
 </p>
 <p>
 
-사이드 바 음악 플레이어 생성
+
 
 </p>
 <p>
 
-로딩창 구현
+
 
 </p>
 <p>
 
-프로젝트 상세 넣기
+
 
 </p>
 <p>
 
-자기소개서 해리포터 신문처럼
+
+
+</p>
+<p>
+
+
+
+</p>
+<p>
+
+
 
 </p>
 </div>

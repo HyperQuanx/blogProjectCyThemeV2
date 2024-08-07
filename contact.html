@@ -68,28 +68,49 @@
                   <div class="inputGroup">
                     <form action="#">
                       <div>
-                        <input
-                          type="text"
-                          placeholder="Id"
-                          class="inputStyle"
-                          autofocus
-                        />
-                        <input
-                          type="password"
-                          placeholder="password"
-                          class="inputStyle"
-                        />
-                        <input
-                          type="tel"
-                          placeholder="PhoneNumber"
-                          class="inputStyle"
-                        />
-                        <textarea
-                          placeholder="Message"
-                          class="textarea"
-                        ></textarea>
+                        <div class="input">
+                          <input
+                            type="text"
+                            placeholder="Email"
+                            class="inputStyle"
+                            autofocus
+                            value=""
+                            id="email"
+                            oninput="emaInput()"
+                          />
+                          <div class="validation" id="val1"></div>
+                        </div>
+
+                        <div class="input">
+                          <input
+                            type="tel"
+                            placeholder="PhoneNumber"
+                            class="inputStyle"
+                            value=""
+                            id="tel"
+                            oninput="telInput()"
+                          />
+                          <div class="validation" id="val2"></div>
+                        </div>
+
+                        <div style="height: 150px">
+                          <textarea
+                            placeholder="Message"
+                            class="textarea"
+                            id="textarea"
+                            oninput="textareaInput()"
+                          ></textarea>
+                          <div class="validation" id="val3"></div>
+                        </div>
                       </div>
-                      <button class="sendB">Send</button>
+                      <button
+                        class="sendB"
+                        id="submitSign"
+                        style="background-color: #808080; cursor: not-allowed"
+                        disabled
+                      >
+                        Send
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -127,6 +148,132 @@
     <script>
       let nick = document.querySelector("#userNickName");
       nick.innerText = `${localStorage.getItem("nn")}의 블로그`;
+      let numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let emailList = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "@",
+        ".",
+      ];
+      let idB = false;
+      let pnB = false;
+      let txB = false;
+
+      let emaInput = () => {
+        let emI = document.querySelector("#email").value;
+        let write1 = document.querySelector("#val1");
+        if (
+          emI.indexOf("@") == -1 ||
+          (emI.indexOf(".com") == -1 && emI.indexOf(".net") == -1)
+        ) {
+          write1.innerText = "이메일 형식으로 입력해주세요.";
+          write1.style.color = "red";
+          idB = false;
+        } else {
+          write1.innerText = "완료";
+          write1.style.color = "#00bfff";
+          idB = true;
+        }
+        enableButton();
+      };
+
+      let telInput = () => {
+        let teI = document.querySelector("#tel").value;
+        let write2 = document.querySelector("#val2");
+        for (let i = 0; i < numList.length; i++) {
+          if (teI.includes(numList[i]) == false) {
+            write2.innerText = "- 없이 전화번호 11자리 입력해주세요";
+            write2.style.color = "red";
+            pnB = false;
+            console.log(teI.length);
+          } else if (teI.includes(numList[i]) == true && teI.length == 11) {
+            write2.innerText = "완료";
+            write2.style.color = "#00bfff";
+            pnB = true;
+            break;
+          }
+        }
+        enableButton();
+      };
+
+      let textareaInput = () => {
+        let textarea = document.querySelector("#textarea").value;
+        let write3 = document.querySelector("#val3");
+        if (textarea.length > 2000) {
+          write3.style.color = "red";
+          write3.innerText = `${textarea.length}/2000`;
+          txB = false;
+        } else {
+          write3.style.color = "#00bfff";
+          write3.innerText = `${textarea.length}/2000`;
+          txB = true;
+        }
+        enableButton();
+      };
+
+      let enableButton = () => {
+        let buttonChange = document.querySelector("#submitSign");
+        if (idB && pnB && txB) {
+          buttonChange.style.color = "white";
+          buttonChange.style.backgroundColor = "#00bfff";
+          buttonChange.style.cursor = "pointer";
+          buttonChange.disabled = false;
+        } else {
+          buttonChange.style.color = "white";
+          buttonChange.style.backgroundColor = "#808080";
+          console.log("dasd");
+        }
+      };
     </script>
   </body>
 </html>
