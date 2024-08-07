@@ -56,9 +56,7 @@
                 </div>
                 <div class="leftRightButton">
                   <div></div>
-                  <a href="detail2.html">
-                    <button class="viewButton">NEXT POST →</button>
-                  </a>
+                  <button class="viewButton" id="linkEvent">NEXT POST →</button>
                 </div>
               </div>
             </div>
@@ -128,6 +126,10 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent").addEventListener("click", () => {
+        location.assign("detail2.html");
       });
     </script>
   </body>

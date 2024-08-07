@@ -145,12 +145,12 @@
                   </ol>
                 </div>
                 <div class="leftRightButton">
-                  <a href="detail8.html">
-                    <button class="viewButton">← PREVIOUS POST</button>
-                  </a>
-                  <a href="detail10.html">
-                    <button class="viewButton">NEXT POST →</button>
-                  </a>
+                  <button class="viewButton" id="linkEvent8">
+                    ← PREVIOUS POST
+                  </button>
+                  <button class="viewButton" id="linkEvent10">
+                    NEXT POST →
+                  </button>
                 </div>
               </div>
             </div>
@@ -220,6 +220,14 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent8").addEventListener("click", () => {
+        location.assign("detail8.html");
+      });
+
+      document.querySelector("#linkEvent10").addEventListener("click", () => {
+        location.assign("detail10.html");
       });
     </script>
   </body>

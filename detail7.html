@@ -127,12 +127,12 @@
                   이해를 도와줄 직접 그린 그림. 근데 이해에 도움이 될까..?
                 </div>
                 <div class="leftRightButton">
-                  <a href="detail6.html">
-                    <button class="viewButton">← PREVIOUS POST</button>
-                  </a>
-                  <a href="detail8.html">
-                    <button class="viewButton">NEXT POST →</button>
-                  </a>
+                  <button class="viewButton" id="linkEvent6">
+                    ← PREVIOUS POST
+                  </button>
+                  <button class="viewButton" id="linkEvent8">
+                    NEXT POST →
+                  </button>
                 </div>
               </div>
             </div>
@@ -202,6 +202,14 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent6").addEventListener("click", () => {
+        location.assign("detail6.html");
+      });
+
+      document.querySelector("#linkEvent8").addEventListener("click", () => {
+        location.assign("detail8.html");
       });
     </script>
   </body>

@@ -83,12 +83,8 @@
                                   <summary class="folderToggle">
                                     <span> Dukyong_Resume </span>
                                   </summary>
-                                  <span>
-                                    <a
-                                      href="personal_resume.html"
-                                      class="myPRLink"
-                                      >Resume_Link << 여기로!</a
-                                    >
+                                  <span id="personal0" class="myPRLink">
+                                    Resume_Link << 여기로!
                                   </span>
                                 </details>
                               </li>
@@ -97,10 +93,8 @@
                                   <summary class="folderToggle">
                                     <span> Dukyong_Self-introduction </span>
                                   </summary>
-                                  <span>
-                                    <a href="personal_pr.html" class="myPRLink"
-                                      >Introducion_Link << 여기로!</a
-                                    >
+                                  <span id="personal1" class="myPRLink">
+                                    Introducion_Link << 여기로!
                                   </span>
                                 </details>
                               </li>
@@ -109,13 +103,8 @@
                                   <summary class="folderToggle">
                                     <span> Dukyong_Velog</span>
                                   </summary>
-                                  <span>
-                                    <a
-                                      href="https://velog.io/@hyper_quanx/posts"
-                                      target="_blank"
-                                      class="myPRLink"
-                                      >Velog_Link << 여기로!</a
-                                    >
+                                  <span id="personal2" class="myPRLink"
+                                    >Velog_Link << 여기로!
                                   </span>
                                 </details>
                               </li>
@@ -124,13 +113,8 @@
                                   <summary class="folderToggle">
                                     <span> Dukyong_Github_repository</span>
                                   </summary>
-                                  <span>
-                                    <a
-                                      href="https://github.com/HyperQuanx?tab=repositories"
-                                      target="_blank"
-                                      class="myPRLink"
-                                      >Github_Link << 여기로!</a
-                                    >
+                                  <span id="personal3" class="myPRLink">
+                                    Github_Link << 여기로!
                                   </span>
                                 </details>
                               </li>
@@ -191,7 +175,21 @@
           location.assign(hrefGroup[i]);
         });
       }
-      
+
+      let personalLinkGroup = [
+        "personal_resume.html",
+        "personal_pr.html",
+        "https://velog.io/@hyper_quanx/posts",
+        "https://github.com/HyperQuanx?tab=repositories",
+      ];
+
+      for (let j = 0; j < personalLinkGroup.length; j++) {
+        let personalLink = document.querySelector(`#personal${j}`);
+        personalLink.addEventListener("click", () => {
+          location.assign(personalLinkGroup[j]);
+        });
+      }
+
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
       });

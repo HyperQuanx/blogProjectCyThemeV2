@@ -39,12 +39,12 @@
                   만들어보고 싶다.
                 </div>
                 <div class="leftRightButton">
-                  <a href="detail4.html">
-                    <button class="viewButton">← PREVIOUS POST</button>
-                  </a>
-                  <a href="detail6.html">
-                    <button class="viewButton">NEXT POST →</button>
-                  </a>
+                  <button class="viewButton" id="linkEvent4">
+                    ← PREVIOUS POST
+                  </button>
+                  <button class="viewButton" id="linkEvent6">
+                    NEXT POST →
+                  </button>
                 </div>
               </div>
             </div>
@@ -114,6 +114,14 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent4").addEventListener("click", () => {
+        location.assign("detail4.html");
+      });
+
+      document.querySelector("#linkEvent6").addEventListener("click", () => {
+        location.assign("detail6.html");
       });
     </script>
   </body>

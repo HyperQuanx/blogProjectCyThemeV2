@@ -42,20 +42,17 @@
                   반성하게 되는 계기가 된 것 같다.
                   <br />
                   <br />
-                  <a
-                    style="color: black"
-                    href="https://github.com/HyperQuanx/ChunjaeHtmlStudy"
-                    target="_blank"
-                    >https://github.com/HyperQuanx/ChunjaeHtmlStudy</a
+                  <span id="githubLink2" style="color: black"
+                    >https://github.com/HyperQuanx/ChunjaeHtmlStudy</span
                   >
                 </div>
                 <div class="leftRightButton">
-                  <a href="detail1.html">
-                    <button class="viewButton">← PREVIOUS POST</button>
-                  </a>
-                  <a href="detail3.html">
-                    <button class="viewButton">NEXT POST →</button>
-                  </a>
+                  <button class="viewButton" id="linkEvent1">
+                    ← PREVIOUS POST
+                  </button>
+                  <button class="viewButton" id="linkEvent3">
+                    NEXT POST →
+                  </button>
                 </div>
               </div>
             </div>
@@ -125,6 +122,18 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#githubLink2").addEventListener("click", () => {
+        window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent1").addEventListener("click", () => {
+        location.assign("detail1.html");
+      });
+
+      document.querySelector("#linkEvent3").addEventListener("click", () => {
+        location.assign("detail3.html");
       });
     </script>
   </body>

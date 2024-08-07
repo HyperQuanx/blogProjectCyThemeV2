@@ -66,43 +66,41 @@
                   <div class="line"></div>
                   <div class="posts">
                     <div class="postG">
-                      <a href="detail6.html" class="postAtag">
+                      <div id="post5" class="postAtag">
                         오늘 하루를 마무리하며
-                      </a>
+                      </div>
                       <span class="date"
                         >Writer : 한덕용 | Date : 2024.07.16 | View : 18</span
                       >
                     </div>
                     <div class="postG">
-                      <a href="detail5.html" class="postAtag"> React 회상 </a>
+                      <div id="post4" class="postAtag">React 회상</div>
                       <span class="date"
                         >Writer : 한덕용 | Date : 2024.07.16 | View : 16</span
                       >
                     </div>
                     <div class="postG">
-                      <a href="detail4.html" class="postAtag"> 마지막 검토 </a>
+                      <div id="post3" class="postAtag">마지막 검토</div>
                       <span class="date"
                         >Writer : 한덕용 | Date : 2024.07.16 | View : 12</span
                       >
                     </div>
                     <div class="postG">
-                      <a href="detail3.html" class="postAtag">
+                      <div id="post2" class="postAtag">
                         오늘 시험 망함.. ㅠ_ㅠ
-                      </a>
+                      </div>
                       <span class="date"
                         >Writer : 한덕용 | Date : 2024.07.16 | View : 8</span
                       >
                     </div>
                     <div class="postG">
-                      <a href="detail2.html" class="postAtag">
-                        2024.07.16 16:36
-                      </a>
+                      <div id="post1" class="postAtag">2024.07.16 16:36</div>
                       <span class="date"
                         >Writer : 한덕용 | Date : 2024.07.16 | View : 12</span
                       >
                     </div>
                     <div class="postG">
-                      <a href="detail1.html" class="postAtag"> 첫 포스트 </a>
+                      <div id="post0" class="postAtag">첫 포스트</div>
                       <span class="date"
                         >Writer : 한덕용 | Date : 2024.07.16 | View : 1</span
                       >
@@ -110,16 +108,16 @@
                   </div>
                   <div class="postButtonGroup">
                     <button class="postButton">
-                      <a href="posts.html" style="color: black"> 처음 </a>
+                      <div id="posts0" style="color: black">처음</div>
                     </button>
                     <button class="postButton">
-                      <a href="posts.html" style="color: black"> [1] </a>
+                      <div id="posts1" style="color: black">[1]</div>
                     </button>
                     <button class="postButton">
-                      <a href="posts2.html" style="color: #00bfff"> [2] </a>
+                      <div id="posts2" style="color: #00bfff">[2]</div>
                     </button>
                     <button class="postButton">
-                      <a href="posts2.html" style="color: black"> 마지막 </a>
+                      <div id="posts3" style="color: black">마지막</div>
                     </button>
                   </div>
                 </div>
@@ -136,7 +134,7 @@
                     class="categoryQ categorySB bLW"
                     style="top: 270px; right: -14px"
                   >
-                    <a href="posts.html" style="color: black">Posts</a>
+                    <div id="cate2" style="color: black">Posts</div>
                   </li>
                   <li class="categoryQ" style="top: 320px">
                     <div id="cate3">Contact</div>
@@ -171,6 +169,36 @@
         let categoryLink = document.querySelector(`#cate${i}`);
         categoryLink.addEventListener("click", () => {
           location.assign(hrefGroup[i]);
+        });
+      }
+
+      let postGroup1 = [
+        "detail1.html",
+        "detail2.html",
+        "detail3.html",
+        "detail4.html",
+        "detail5.html",
+        "detail6.html",
+      ];
+
+      for (let j = 0; j < postGroup1.length; j++) {
+        let postsLink = document.querySelector(`#post${j}`);
+        postsLink.addEventListener("click", () => {
+          location.assign(postGroup1[j]);
+        });
+      }
+
+      let postGroup3 = [
+        "posts.html",
+        "posts.html",
+        "posts2.html",
+        "posts2.html",
+      ];
+
+      for (let k = 0; k < postGroup3.length; k++) {
+        let postsLink2 = document.querySelector(`#posts${k}`);
+        postsLink2.addEventListener("click", () => {
+          location.assign(postGroup3[k]);
         });
       }
 

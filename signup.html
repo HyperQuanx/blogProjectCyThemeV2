@@ -45,7 +45,11 @@
           </div>
           <div class="backR">
             <div class="backRHead">
-              <span class="backRHT" style="font-size: 20px" id="nick"></span>
+              <span
+                class="backRHT"
+                style="font-size: 20px"
+                id="userNickName"
+              ></span>
               <div
                 class="backRHT"
                 id="githubLink"
@@ -111,15 +115,14 @@
                           </div>
 
                           <div class="stringCenter">
-                            <a href="login.html" class="singUpLink"> 로그인 </a>
+                            <span id="cate4" class="singUpLink">로그인</span>
                             <span style="color: #888">|</span>
-                            <a
-                              href="https://policy.naver.com/rules/service.html"
+                            <span
                               class="singUpLink"
-                              target="_blank"
+                              id="naverLink"
                             >
                               이용약관
-                            </a>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -145,7 +148,7 @@
                     class="categoryQ categorySB bLW"
                     style="top: 370px; right: -14px"
                   >
-                    <a href="login.html" style="color: black">Login</a>
+                    <div id="cate4" style="color: black">Login</div>
                   </li>
                   <li class="categoryQ" style="top: 420px">
                     <div id="cate5">Personal</div>
@@ -343,8 +346,6 @@
       // } else {
       //   document.write(localStorage.getItem("id"));
       // }
-    </script>
-    <script>
       let nick = document.querySelector("#userNickName");
       nick.innerText = `${localStorage.getItem("nn")}의 블로그`;
 
@@ -367,6 +368,11 @@
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
       });
+
+      document.querySelector("#naverLink").addEventListener("click", () => {
+        window.open("https://policy.naver.com/rules/service.html");
+      });
     </script>
+    <script></script>
   </body>
 </html>

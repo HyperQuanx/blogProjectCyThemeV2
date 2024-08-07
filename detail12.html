@@ -56,12 +56,9 @@
                   좋은 주말 보내시고 월요일 날 뵙겠습니다!
                 </div>
                 <div class="leftRightButton">
-                  <a href="detail11.html">
-                    <button class="viewButton">← PREVIOUS POST</button>
-                  </a>
-                  <!-- <a href="detail13.html">
-                    <button class="viewButton">NEXT POST →</button>
-                  </a> -->
+                  <button class="viewButton" id="linkEvent">
+                    ← PREVIOUS POST
+                  </button>
                 </div>
               </div>
             </div>
@@ -131,6 +128,10 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent").addEventListener("click", () => {
+        location.assign("detail11.html");
       });
     </script>
   </body>

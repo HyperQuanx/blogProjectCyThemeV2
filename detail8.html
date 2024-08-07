@@ -209,12 +209,12 @@
                   길어서 하나 더 포스팅.
                 </div>
                 <div class="leftRightButton">
-                  <a href="detail7.html">
-                    <button class="viewButton">← PREVIOUS POST</button>
-                  </a>
-                  <a href="detail9.html">
-                    <button class="viewButton">NEXT POST →</button>
-                  </a>
+                  <button class="viewButton" id="linkEvent7">
+                    ← PREVIOUS POST
+                  </button>
+                  <button class="viewButton" id="linkEvent9">
+                    NEXT POST →
+                  </button>
                 </div>
               </div>
             </div>
@@ -284,6 +284,14 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent7").addEventListener("click", () => {
+        location.assign("detail7.html");
+      });
+
+      document.querySelector("#linkEvent9").addEventListener("click", () => {
+        location.assign("detail9.html");
       });
     </script>
   </body>

@@ -349,6 +349,7 @@ p {
   margin: 0;
   text-decoration: underline;
   color: black;
+  cursor: pointer;
 }
 
 .newIcon {
@@ -457,6 +458,7 @@ p {
 .morePosts {
   display: flex;
   justify-content: right;
+  cursor: pointer;
 }
 
 .morePosts > a {
@@ -471,6 +473,8 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .posts {
@@ -506,6 +510,7 @@ p {
   border: none;
   cursor: pointer;
   font-size: 20px;
+  text-decoration: underline;
 }
 
 .contactTitle {
@@ -561,7 +566,7 @@ p {
 }
 
 .sendB {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: #00bfff;
@@ -583,6 +588,7 @@ p {
 .singUpLink {
   text-decoration: none;
   color: #00bfff;
+  cursor: pointer;
 }
 
 .input {

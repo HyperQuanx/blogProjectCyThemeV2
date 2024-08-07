@@ -108,17 +108,13 @@
                             아직 계정이 없으신가요?
                           </div>
                           <div class="stringCenter" style="margin-top: 25px">
-                            <a href="signup.html" class="singUpLink">
+                            <span id="linkEvent" class="singUpLink">
                               회원가입
-                            </a>
+                            </span>
                             <span style="color: #888">|</span>
-                            <a
-                              href="https://policy.naver.com/rules/service.html"
-                              class="singUpLink"
-                              target="_blank"
-                            >
+                            <span class="singUpLink" id="naverLink">
                               이용약관
-                            </a>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -336,6 +332,14 @@
 
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
+
+      document.querySelector("#linkEvent").addEventListener("click", () => {
+        location.assign("signup.html");
+      });
+
+      document.querySelector("#naverLink").addEventListener("click", () => {
+        window.open("https://policy.naver.com/rules/service.html");
       });
     </script>
   </body>

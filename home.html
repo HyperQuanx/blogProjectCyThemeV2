@@ -66,31 +66,29 @@
                   <div class="updateNews">
                     <div class="newsTitle">
                       <span class="news">news</span
-                      ><a class="nT" href="detail12.html"
+                      ><span class="nT" id="detailHome0"
                         >선생님께 편지
                         <img src="images/newIcon.png" class="newIcon" />
-                      </a>
+                      </span>
                     </div>
                     <div class="newsTitle">
                       <span class="news">news</span
-                      ><a class="nT" href="detail11.html">식겁한 오늘</a>
+                      ><span class="nT" id="detailHome1">식겁한 오늘</span>
                       <img src="images/newIcon.png" class="newIcon" />
                     </div>
                     <div class="newsTitle">
                       <span class="news">news</span
-                      ><a class="nT" href="detail10.html">Css 과정 끝.</a>
+                      ><span class="nT" id="detailHome2">Css 과정 끝.</span>
                       <img src="images/newIcon.png" class="newIcon" />
                     </div>
                     <div class="newsTitle">
                       <span class="news">news</span
-                      ><a class="nT" href="detail9.html"
-                        >(TIL) - Css 선택자, 가상 클래스, 가상 요소 2</a
+                      ><span class="nT" id="detailHome3"
+                        >(TIL) - Css 선택자, 가상 클래스, 가상 요소 2</span
                       >
                       <img src="images/newIcon.png" class="newIcon" />
                     </div>
-                    <div class="morePosts">
-                      <a href="posts.html">더보기 ▷</a>
-                    </div>
+                    <div class="morePosts" id="linkEvent">더보기 ▷</div>
                   </div>
                   <p class="miniTitle" style="margin-top: 10px">Miniroom</p>
                   <div class="line"></div>
@@ -158,6 +156,24 @@
       document.querySelector("#githubLink").addEventListener("click", () => {
         window.open("https://github.com/HyperQuanx?tab=repositories");
       });
+
+      document.querySelector("#linkEvent").addEventListener("click", () => {
+        location.assign("posts.html");
+      });
+
+      let detailHome = [
+        "detail12.html",
+        "detail11.html",
+        "detail10.html",
+        "detail9.html",
+      ];
+
+      for (let j = 0; j < detailHome.length; j++) {
+        let detailsLink = document.querySelector(`#detailHome${j}`);
+        detailsLink.addEventListener("click", () => {
+          location.assign(detailHome[j]);
+        });
+      }
     </script>
   </body>
 </html>

@@ -285,17 +285,21 @@
                         </th>
                         <td>
                           - 서비스 링크 :
-                          <a
-                            href="https://nine-cloud9.vercel.app/"
+                          <span
+                            id="linkEvent1"
                             class="ncColor"
-                            style="text-decoration: line-through"
-                            >서버 유지 기간 마감</a
+                            style="
+                              text-decoration: line-through;
+                              cursor: pointer;
+                            "
+                            >서버 유지 기간 마감</span
                           ><br />
                           - github 링크 :
-                          <a
-                            href="https://github.com/final-project-hh99/front?tab=readme-ov-file"
+                          <span
+                            id="linkEvent2"
                             class="ncColor"
-                            >https://github.com/final-project-hh99/front?tab=readme-ov-file</a
+                            style="cursor: pointer"
+                            >https://github.com/final-project-hh99/front?tab=readme-ov-file</span
                           >
                         </td>
                       </tr>
@@ -439,15 +443,16 @@
         </div>
       </div>
       <div style="position: relative">
-        <div class="backPer" style="left: -1px; top: 0px">
-          <a href="personal.html">Back</a>
+        <div
+          class="backPer"
+          style="left: -1px; top: 0px; cursor: pointer"
+          id="linkEvent"
+        >
+          Back
         </div>
       </div>
     </div>
     <script>
-      // document.querySelector("#nowrap1").addEventListener("click", () => {
-
-      // });
       let main = document.querySelector("#mainContent");
       let scroll1 = () => {
         main.scrollTo({ top: 2150, behavior: "smooth" });
@@ -470,6 +475,20 @@
       let scroll7 = () => {
         main.scrollTo({ top: 9000, behavior: "smooth" });
       };
+
+      document.querySelector("#linkEvent").addEventListener("click", () => {
+        location.assign("personal.html");
+      });
+
+      document.querySelector("#linkEvent1").addEventListener("click", () => {
+        location.assign("https://nine-cloud9.vercel.app/");
+      });
+
+      document.querySelector("#linkEvent2").addEventListener("click", () => {
+        location.assign(
+          "https://github.com/final-project-hh99/front?tab=readme-ov-file"
+        );
+      });
     </script>
   </body>
 </html>
