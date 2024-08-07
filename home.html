@@ -50,12 +50,13 @@
                 style="font-size: 20px"
                 id="userNickName"
               ></span>
-              <a
+              <div
                 class="backRHT"
-                style="font-size: 15px"
-                href="https://github.com/HyperQuanx?tab=repositories"
-                >My Github Repositories</a
+                id="githubLink"
+                style="font-size: 15px; cursor: pointer"
               >
+                My Github Repositories
+              </div>
             </div>
             <div class="flex">
               <div class="backRMainB">
@@ -125,7 +126,7 @@
                     <div id="cate4">Login</div>
                   </li>
                   <li class="categoryQ" style="top: 420px">
-                    <div id="cate5">personal</div>
+                    <div id="cate5">Personal</div>
                   </li>
                 </ul>
               </div>
@@ -153,6 +154,10 @@
           location.assign(hrefGroup[i]);
         });
       }
+
+      document.querySelector("#githubLink").addEventListener("click", () => {
+        window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
     </script>
   </body>
 </html>

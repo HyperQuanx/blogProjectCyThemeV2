@@ -24,7 +24,7 @@
               <div class="bookSlideWrap">
                 <ul class="bookSlideList">
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>지원동기</h1>
@@ -41,10 +41,10 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>개발자를 선택하게 된 이유</h1>
@@ -72,10 +72,10 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>기억에 남는 개발 프로젝트</h1>
@@ -104,10 +104,10 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>개발 프로젝트 진행 시 주요 담당 역할</h1>
@@ -135,10 +135,10 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>다른 사람과 구별되는 나만의 강점</h1>
@@ -156,10 +156,10 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>성격의 장점과 단점</h1>
@@ -182,10 +182,10 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>내가 생각하는 좋은 코드란</h1>
@@ -204,10 +204,10 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <li>
-                    <a>
+                    <article>
                       <div class="bookSlideContent">
                         <div class="textC">
                           <h1>입사 후 포부</h1>
@@ -220,7 +220,7 @@
                           </div>
                         </div>
                       </div>
-                    </a>
+                    </article>
                   </li>
                   <div class="bookSlideControl">
                     <div class="control1">
@@ -263,22 +263,22 @@
               <div class="categoryGroup">
                 <ul class="category">
                   <li class="categoryQ" style="top: 170px; right: -14px">
-                    <a href="home.html">Home</a>
+                    <div id="cate0">Home</div>
                   </li>
                   <li class="categoryQ" style="top: 220px; right: -14px">
-                    <a href="about.html">About</a>
+                    <div id="cate1">About</div>
                   </li>
                   <li class="categoryQ" style="top: 270px; right: -14px">
-                    <a href="posts.html">Posts</a>
+                    <div id="cate2">Posts</div>
                   </li>
                   <li class="categoryQ" style="top: 320px; right: -14px">
-                    <a href="contact.html">Contact</a>
+                    <div id="cate3">Contact</div>
                   </li>
                   <li class="categoryQ" style="top: 370px; right: -14px">
-                    <a href="login.html">Login</a>
+                    <div id="cate4">Login</div>
                   </li>
                   <li class="categoryQ" style="top: 420px; right: -14px">
-                    <a href="personal.html">personal</a>
+                    <div id="cate5">Personal</div>
                   </li>
                 </ul>
               </div>
@@ -287,5 +287,23 @@
         </div>
       </div>
     </div>
+    <script>
+      let hrefGroup = [
+        "home.html",
+        "about.html",
+        "posts.html",
+        "contact.html",
+        "login.html",
+        "personal.html",
+      ];
+
+      for (let i = 0; i < hrefGroup.length; i++) {
+        let categoryLink = document.querySelector(`#cate${i}`);
+        categoryLink.addEventListener("click", () => {
+          location.assign(hrefGroup[i]);
+        });
+      }
+
+    </script>
   </body>
 </html>

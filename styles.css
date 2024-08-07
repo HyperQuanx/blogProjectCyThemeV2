@@ -1001,7 +1001,7 @@ td img {
   right: 449px;
 }
 
-.backPer a {
+.backPer article {
   color: white;
   text-decoration: none;
 }
@@ -1028,12 +1028,12 @@ td img {
   transition: all 0.5s;
 }
 
-.bookSection .bookSlideList > li > a {
+.bookSection .bookSlideList > li > article {
   display: block;
   position: relative;
 }
 
-.bookSection .bookSlideList > li > a img {
+.bookSection .bookSlideList > li > article img {
   width: 100%;
 }
 

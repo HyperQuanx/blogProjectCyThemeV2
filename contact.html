@@ -50,12 +50,13 @@
                 style="font-size: 20px"
                 id="userNickName"
               ></span>
-              <a
+              <div
                 class="backRHT"
-                style="font-size: 15px"
-                href="https://github.com/HyperQuanx?tab=repositories"
-                >My Github Repositories</a
+                id="githubLink"
+                style="font-size: 15px; cursor: pointer"
               >
+                My Github Repositories
+              </div>
             </div>
             <div class="flex">
               <div class="backRMainB">
@@ -118,25 +119,25 @@
               <div class="categoryGroup">
                 <ul class="category">
                   <li class="categoryQ" style="top: 170px">
-                    <a href="home.html">Home</a>
+                    <div id="cate0">Home</div>
                   </li>
                   <li class="categoryQ" style="top: 220px">
-                    <a href="about.html">About</a>
+                    <div id="cate1">About</div>
                   </li>
                   <li class="categoryQ" style="top: 270px">
-                    <a href="posts.html">Posts</a>
+                    <div id="cate2">Posts</div>
                   </li>
                   <li
                     class="categoryQ categorySB bLW"
                     style="top: 320px; right: -14px"
                   >
-                    <a href="contact.html" style="color: black">Contact</a>
+                    <div id="cate3" style="color: black">Contact</div>
                   </li>
                   <li class="categoryQ" style="top: 370px">
-                    <a href="login.html">Login</a>
+                    <div id="cate4">Login</div>
                   </li>
                   <li class="categoryQ" style="top: 420px">
-                    <a href="personal.html">personal</a>
+                    <div id="cate5">Personal</div>
                   </li>
                 </ul>
               </div>
@@ -249,7 +250,7 @@
       let textareaInput = () => {
         let textarea = document.querySelector("#textarea").value;
         let write3 = document.querySelector("#val3");
-        if (textarea.length > 2000) {
+        if (textarea.length > 2000 || textarea.length == 0) {
           write3.style.color = "red";
           write3.innerText = `${textarea.length}/2000`;
           txB = false;
@@ -274,6 +275,26 @@
           console.log("dasd");
         }
       };
+
+      let hrefGroup = [
+        "home.html",
+        "about.html",
+        "posts.html",
+        "contact.html",
+        "login.html",
+        "personal.html",
+      ];
+
+      for (let i = 0; i < hrefGroup.length; i++) {
+        let categoryLink = document.querySelector(`#cate${i}`);
+        categoryLink.addEventListener("click", () => {
+          location.assign(hrefGroup[i]);
+        });
+      }
+
+      document.querySelector("#githubLink").addEventListener("click", () => {
+        window.open("https://github.com/HyperQuanx?tab=repositories");
+      });
     </script>
   </body>
 </html>

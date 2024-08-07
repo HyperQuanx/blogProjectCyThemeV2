@@ -1,5 +1,3 @@
-
-
 <div align="center">
 <p>
 
@@ -9,12 +7,12 @@
 
 <p>
 
-contact, Login, Sign up validation 가능.
+contact, Login, Sign up 동적인 validation 가능.
 
 </p>
 <p>
 
-모든 유효성 검사를 거쳐야 버튼 활성화
+모든 유효성 검사를 거쳐야 버튼 활성화(동적인 validation)
 
 </p>
 <p>
@@ -24,42 +22,28 @@ contact, Login, Sign up validation 가능.
 </p>
 <p>
 
-a 태그 214개
+a 태그 214개 => 50개로 감소
 
 </p>
 <p>
 
-
+</p>
+<p>
 
 </p>
 <p>
 
-
+</p>
+<p>
 
 </p>
 <p>
 
-
-
 </p>
 <p>
 
-
-
 </p>
 <p>
-
-
-
-</p>
-<p>
-
-
-
-</p>
-<p>
-
-
 
 </p>
 </div>
